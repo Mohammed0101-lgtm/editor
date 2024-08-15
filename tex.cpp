@@ -9,8 +9,6 @@
 // #include "highlight.h"
 
 #define TAB_STOP 4
-#define HIGHLIGHT_NUMBERS (1<<0)
-#define HIGHLIGHT_STRINGS (1<<1)
 
 static int syntax_mode;
 
@@ -110,7 +108,7 @@ void refresh_screen() {
     clear(); 
 
     int height, width;
-    getmaxyx(stdscr, height, width); // Get screen dimensions
+    getmaxyx(stdscr, height, width); 
 
     int current_row = 0;
     int current_col = 0;
@@ -213,6 +211,9 @@ void process_key() {
             break;
         case KEY_HOME :
             edit.cursor_x = 0;
+            break;
+        case KEY_SAVE :
+            save_file();
             break;
         case KEY_UP : 
         case KEY_DOWN : 
