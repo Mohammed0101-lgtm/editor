@@ -6,7 +6,6 @@
 #include <cassert>
 #include <string>
 #include <vector>
-// #include "highlight.h"
 
 #define TAB_STOP 4
 
